@@ -77,3 +77,10 @@ Best in a terminal with true color, such as Windows Terminal, iTerm2, Kitty, Ala
 ## License
 
 MIT
+
+## Credits
+
+- [lavat](https://github.com/AngelJumbo/lavat) by AngelJumbo, the terminal lava lamp that inspired this project. Many of lavalamp's flags and keys follow lavat's.
+- [tcell](https://github.com/gdamore/tcell) by Garrett D'Amore, which handles the terminal on every platform, including Windows.
+- [go-colorful](https://github.com/lucasb-eyer/go-colorful) by Lucas Beyer, used for color math in OkLch.
+- The metaball technique comes from Jim Blinn's "blobby objects" (1982).
