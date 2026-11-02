@@ -1,8 +1,9 @@
-# lavalamp
+lavalamp
+========
+
+[![Go Reference](https://pkg.go.dev/badge/github.com/eligibilityy/lavalamp.svg)](https://pkg.go.dev/github.com/eligibilityy/lavalamp)
 
 A lava lamp for your terminal, written in Go. Runs natively on Windows, macOS and Linux.
-
-Wax blobs heat up at the bottom, rise, cool at the top and sink again. They merge and split as they pass each other, drawn with smooth edges in true color. Inspired by [lavat](https://github.com/AngelJumbo/lavat).
 
 ## Install
 
@@ -11,8 +12,6 @@ With Go 1.24 or newer:
 ```sh
 go install github.com/eligibilityy/lavalamp@latest
 ```
-
-This puts `lavalamp` in Go's bin folder (`%USERPROFILE%\go\bin` on Windows, `~/go/bin` elsewhere). Make sure that folder is on your PATH.
 
 ## Usage
 
@@ -24,24 +23,22 @@ lavalamp -F "@%#*+=-:."           # draw with characters
 lavalamp -h                       # every option and key
 ```
 
-If the blobs look stretched, adjust the aspect ratio with `[` and `]` while it runs, then pass the value it shows with `-aspect`.
-
 ### Options
 
 | Flag | Meaning | Default |
 |---|---|---|
-| `-theme` | `lava`, `ocean`, `slime`, `grape`, `sunset`, `mono` | `lava` |
-| `-c` | wax color: a name or hex code like `ff6020` | from theme |
+| `-theme <THEME>` | `lava`, `ocean`, `slime`, `grape`, `sunset`, `mono` | `lava` |
+| `-c <COLOR>` | wax color: a name or hex code like `ff6020` | from theme |
 | `-k` | rim color (turns the rim on) | from theme |
 | `-bg` | liquid color | from theme |
-| `-b` | number of blobs, 1 to 20 | 6 |
-| `-r` | blob size, 1 to 10 | 5 |
-| `-s` | speed, 1 to 10 | 5 |
-| `-R` | rim thickness, 0 (off) to 5 | 0 |
+| `-b <BLOBS>` | number of blobs, 1 to 20 | 6 |
+| `-r <SIZE>` | blob size, 1 to 10 | 5 |
+| `-s <SPEED>` | speed, 1 to 10 | 5 |
+| `-R <THICKNESS>` | rim thickness, 0 (off) to 5 | 0 |
 | `-shade` | depth shading | off |
 | `-hard` | hard edges | off |
-| `-F` | draw with these characters, core first | off |
-| `-aspect` | pixel height ÷ width | 1.0 |
+| `-F <CHARS>` | draw with these characters, core first | off |
+| `-aspect <ASPECT>` | pixel height ÷ width | 1.0 |
 | `-fps` | frames per second, 5 to 120 | 30 |
 | `-version` | print the version | |
 
@@ -80,7 +77,6 @@ MIT
 
 ## Credits
 
-- [lavat](https://github.com/AngelJumbo/lavat) by AngelJumbo, the terminal lava lamp that inspired this project. Many of lavalamp's flags and keys follow lavat's.
-- [tcell](https://github.com/gdamore/tcell) by Garrett D'Amore, which handles the terminal on every platform, including Windows.
-- [go-colorful](https://github.com/lucasb-eyer/go-colorful) by Lucas Beyer, used for color math in OkLch.
-- The metaball technique comes from Jim Blinn's "blobby objects" (1982).
+- [lavat](https://github.com/AngelJumbo/lavat) by AngelJumbo
+- [tcell](https://github.com/gdamore/tcell) by Garrett D'Amore
+- [go-colorful](https://github.com/lucasb-eyer/go-colorful) by Lucas Beyer
